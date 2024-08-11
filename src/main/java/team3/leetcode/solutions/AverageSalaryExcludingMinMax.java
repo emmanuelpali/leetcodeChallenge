@@ -7,7 +7,7 @@ public class AverageSalaryExcludingMinMax {
 		int minSalary = salary[0];
 		int maxSalary = salary[0];
 		// declare totalSalary to accumulate the salaries
-		double totalSalary = 0;
+		double totalSalary = 0; 
 
 		// iterate through each salary in the array
 		for (int i : salary) {
