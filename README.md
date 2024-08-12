@@ -43,11 +43,6 @@ https://app.codingrooms.com/app/org/bptn-bootcamps-Wikw6pa/course/full-stack-dev
 
 ## Add Two Numbers
 #### Approach and Reasoning behind it
--
-#### Algorithm Explanation
--
-
-## Merge Two Sorted Lists
 <h4> Approach and Reasoning behind it </h4>
 The problem involves adding two numbers stored in reverse in a linked list. This approach accurately adds two numbers digit by digit without having to use other data structures other than a linkedList. It handles edge cases like situations where you have two list with varying lengths. This approach is similar to the algorithm used to reverse a number, it works because the numbers are stored in reverse.
 
@@ -65,4 +60,25 @@ The problem involves adding two numbers stored in reverse in a linked list. This
 If there are remaining nodes in list1, add them to the merged list.
 If there are remaining nodes in list2, add them to the merged list.
 10- Skip the dummy node and return the actual head of the merged list.
+-
+
+## Merge Two Sorted Lists
+<h4> Approach and Reasoning behind it </h4>
+The approach allows us to use only linkedList in our solution and to maintain a single pass (O(n)) and ensure an ordered merge by leveraging the existing order in both lists, making the process efficient and straightforward.
+
+#### Algorithm Explanation
+-This algorithm merges two sorted linked lists into one sorted list. It creates a dummy head node and iteratively compares the current nodes of both lists, appending the smaller node to the merged list. The process continues until one list is exhausted. Any remaining nodes from the other list are then directly attached to the merged list. The algorithm returns the merged list, starting from head.next, as head is a placeholder. This approach efficiently combines two sorted lists into a single sorted linked list.
+- Here is the pseudocode
+1- Create a dummy node to act as the head of the merged list.
+2- Initialise a pointer (current) to the current node in the merged list.
+3- Loop until one of the two list  is null:
+4- Compare the values and add the smaller node to the merged list:
+5- If the value in list1 is less than or equal to the value in list2, add the list1 node to the merged list and 6- Move to the next node in list1.
+7- Otherwise, add the list2 node to the merged list and move to the next node in list2.
+8- Move the current pointer to the next node in the merged list.
+9- Handle remaining nodes:
+If there are remaining nodes in list1, add them to the merged list.
+If there are remaining nodes in list2, add them to the merged list.
+10- Skip the dummy node and return the actual head of the merged list.
+
 
