@@ -2,7 +2,7 @@
 
 https://app.codingrooms.com/app/org/bptn-bootcamps-Wikw6pa/course/full-stack-developer-bootcamp%253A-cohort-2-3p7aTai/b/leetcode-problems-qRJ3BCm|
 
-## Average Salary Excluding the Minimum and Maximum Salary
+## Emmanuel - Average Salary Excluding the Minimum and Maximum Salary
 
 <h4> Approach and Reasoning behind it </h4>
 - This is pretty straight forward, since we want to calculate the average excluding the max and minimum salaries, we simply keep get the two excluding salaries and subtract them from the total sum of salaries and calculate the average.
@@ -17,13 +17,25 @@ https://app.codingrooms.com/app/org/bptn-bootcamps-Wikw6pa/course/full-stack-dev
 	Ensure that you account for the two subtractions
 6- Return the average
 
-## Squares of a Sorted Array
-<h4> Approach and Reasoning behind it <h4/>
-- 
-<h4> Algorithm Explanation </h4>
--
+## Anayika - Squares of a Sorted Array
 
-## Missing Number
+<h4> Approach and Reasoning behind it <h4/>
+- This algorithm sorts the squares of numbers in a sorted array. It does this by using two pointers: one at the start and one at the end. Since the biggest squares might be at either end, it compares them, places the bigger square at the end of a new list, and then moves the pointer. This way, it quickly and easily creates a new list with all the squares in the right order.
+<h4> Algorithm Explanation </h4>
+- This algorithm squares the numbers of a sorted array and sorts the squared values in a non-decreasing order by using a two-pointer technique to compare and place the larger squares at the end of a new list.
+- Here is the pseudocode	
+1- Initialize an empty sortedList array with the same length as nums
+2- Set the left pointer to the start of the array and right pointer to the end of the array
+3- Set the index to the last position of the sortedList
+4- While the left pointer is less than or equal to right pointer:
+     a.Calculate the square of the elements at the left and right of the array
+     b.Compare the two squares:
+     	- If the left square is larger, place it at the current index in sortedList and move the left pointer right
+         - Else, place the right square at the current index in sortedList and move the right pointer left
+    c. Decrement the index
+ 5- Return the sortedList
+
+## Errol - Missing Number
 #### Approach and Reasoning behind it
 - Understanding the constraints of the question really helped with edge cases. Since the question would only give unique numbers, a set was not needed. Since the minimum number in the zone was 0 it was easier to no logic was needed to account for this. We also know there will be at least one number missing since 0 is included.
 ##### Logic of First Solution Attempt
@@ -41,7 +53,7 @@ https://app.codingrooms.com/app/org/bptn-bootcamps-Wikw6pa/course/full-stack-dev
 - To find the missing number in an Array from 0...n we are given an area nums. nums Is turned to an ArrayList for ease of use (unnecessary) by adding each number to an ArrayList called finalList using a for loop. The ArrayList is sorted for easy comparison. A for loop is then created where Two indexes are compared, 1) for the sortedList, 2)  numCounter which increments each for loop. When the indexes don't match we know that's the missing number, and we can return numCounter. We also have a second return statement outside the for loop for the case when the missing number is the last number of the array
 - Algorithm is O(n) due to the for loop
 
-## Add Two Numbers
+## Team 3 - Add Two Numbers
 #### Approach and Reasoning behind it
 <h4> Approach and Reasoning behind it </h4>
 The problem involves adding two numbers stored in reverse in a linked list. This approach accurately adds two numbers digit by digit without having to use other data structures other than a linkedList. It handles edge cases like situations where you have two list with varying lengths. This approach is similar to the algorithm used to reverse a number, it works because the numbers are stored in reverse.
@@ -62,7 +74,7 @@ If there are remaining nodes in list2, add them to the merged list.
 10- Skip the dummy node and return the actual head of the merged list.
 -
 
-## Merge Two Sorted Lists
+## Team 3 - Merge Two Sorted Lists
 <h4> Approach and Reasoning behind it </h4>
 The approach allows us to use only linkedList in our solution and to maintain a single pass (O(n)) and ensure an ordered merge by leveraging the existing order in both lists, making the process efficient and straightforward.
 
